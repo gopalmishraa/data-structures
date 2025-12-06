@@ -17,12 +17,9 @@ class LinkedList:
            return
        # Start iterating the linked list from the head and reach upto the last node
        itr = self.head
-       while itr is not None:
+       while itr.next:
            itr = itr.next
-           if itr.next is None:
-               itr.next = Node(data, None)
-               break
-
+       itr.next = Node(data, None)
 
     def print(self):
         if self.head is None:
